@@ -1,0 +1,21 @@
+uuid: 0decebc2-48a2-4c12-9943-4954f6de9b35
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - taxonomy
+id: block_content.field_block_color_theme
+field_name: field_block_color_theme
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: taxonomy_term
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

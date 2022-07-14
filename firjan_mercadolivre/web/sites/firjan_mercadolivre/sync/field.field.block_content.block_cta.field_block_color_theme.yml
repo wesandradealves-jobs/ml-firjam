@@ -1,0 +1,31 @@
+uuid: 61e949e7-c023-4f91-a711-84fc92247bb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_cta
+    - field.storage.block_content.field_block_color_theme
+    - taxonomy.vocabulary.block_themes
+  module:
+    - entity_reference_revisions
+id: block_content.block_cta.field_block_color_theme
+field_name: field_block_color_theme
+entity_type: block_content
+bundle: block_cta
+label: 'Block Color Theme'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      block_themes: block_themes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference_revisions

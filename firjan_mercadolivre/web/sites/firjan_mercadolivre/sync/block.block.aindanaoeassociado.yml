@@ -1,0 +1,25 @@
+uuid: a6c4b887-d3f7-43c2-b607-edff14a3125a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_cta:5a73357e-9502-49a3-a1ea-fe7a6f8f4fd8'
+  module:
+    - block_content
+  theme:
+    - firjan_mercadolivre
+id: aindanaoeassociado
+theme: firjan_mercadolivre
+region: dashboard
+weight: -1
+provider: null
+plugin: 'block_content:5a73357e-9502-49a3-a1ea-fe7a6f8f4fd8'
+settings:
+  id: 'block_content:5a73357e-9502-49a3-a1ea-fe7a6f8f4fd8'
+  label: 'Ainda não é associado?'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

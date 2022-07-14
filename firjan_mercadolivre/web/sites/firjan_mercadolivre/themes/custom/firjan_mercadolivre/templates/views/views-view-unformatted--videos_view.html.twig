@@ -1,0 +1,34 @@
+{#
+/**
+  * @file
+  * Default theme implementation to display a view of unformatted rows.
+  *
+  * Available variables:
+  * - title: The title of this group of rows. May be empty.
+  * - rows: A list of the view's row items.
+  *   - attributes: The row's HTML attributes.
+  *   - content: The row's content.
+  * - view: The view object.
+  * - default_row_class: A flag indicating whether default classes should be
+  *   used on rows.
+  *
+  * @see template_preprocess_views_view_unformatted()
+  *
+  * @ingroup themeable
+  */
+#}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      'video-block js-modal-btn',
+      'col-12 col-md-6 col-lg-4 mb-3'
+    ]
+  %}
+  {% set thumbApi = '//img.youtube.com/vi/' ~ row.content['#row']._entity.field_video_url[0].value|split('?v=')[1] ~ '/0.jpg' %}
+  <li{{ row.attributes.addClass(row_classes) }} data-video-id="{{row.content['#row']._entity.field_video_url[0].value|split('?v=')[1]}}"> 
+    <div class="video-block-thumbnail" style="background-image: url({% if row.content['#row']._entity.field_video_thumbnail.entity.uri.value %} {{file_url(row.content['#row']._entity.field_video_thumbnail.entity.uri.value)}} {% else %} //img.youtube.com/vi/{{row.content['#row']._entity.field_video_url[0].value|split('?v=')[1]}}/0.jpg {% endif %})">
+      {# <i class="fa-solid fa-play"></i> #}
+    </div>
+    <h4 class="video-block-title mt-3">{{row.content['#row']._entity.title[0].value}}</h4>
+  </li>
+{% endfor %}

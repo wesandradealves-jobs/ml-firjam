@@ -1,0 +1,67 @@
+uuid: f47d21f5-bb36-4137-b058-c164ca706279
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_cta
+    - field.field.block_content.block_cta.body
+    - field.field.block_content.block_cta.field_block_color_theme
+    - field.field.block_content.block_cta.field_block_cta
+    - field.field.block_content.block_cta.field_block_custom_classes
+    - field.field.block_content.block_cta.field_inverse_block_layout
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+id: block_content.block_cta.default
+targetEntityType: block_content
+bundle: block_cta
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_block_color_theme:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_block_cta:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_block_custom_classes:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_inverse_block_layout:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }
